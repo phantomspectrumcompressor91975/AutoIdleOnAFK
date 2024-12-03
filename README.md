@@ -1,0 +1,2 @@
+# AutoIdleOnAFK
+Vencord Plugin
