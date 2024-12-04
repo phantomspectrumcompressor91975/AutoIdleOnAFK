@@ -5,12 +5,24 @@
 */
 
 import { Devs } from "@utils/constants";
-import { definePlugin, OptionType } from "@utils/types";
+import definePlugin, { OptionType } from "@utils/types";
 import { definePluginSettings } from "@api/Settings";
 
 
 const settings = definePluginSettings({
-    
+    timeUntilIdle: {
+        type: OptionType.NUMBER,
+        description: "Time (In Minutes) until Idle/Invisible",
+        default: 5,
+    },
+    idleOrInvis: {
+        description: "Set Status as Idle or Invisible",
+        type: OptionType.SELECT,
+        options: [
+            { label: "Idle", value: 1},
+            { label: "Invisible", value: 2 },
+        ],
+    }
 });
 
 export default definePlugin({
